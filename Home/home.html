@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;700&display=swap" rel="stylesheet">
+  
+
+    <link rel="stylesheet" href="../styles.css">
+
+</head>
+<body>
+    <div id="background"></div>
+    <div class="banner" id="bloque1"></div>
+    <div class="subbanner" id="bloque2"></div>
+    <div class="form-grid" id="bloque5"></div>
+    <div class="botonescentrados" id="bloque3"></div>
+    <div class="botonescentrados" id="bloque4"></div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+       fetch('../footer.html')
+       .then(response => response.text())
+       .then(data => {
+       document.body.insertAdjacentHTML('beforeend', data);
+    });
+});
+
+</script>
+    
+<script src="home.js"></script>
+
+    
+    
+
+</body>
+
+    
+
+</html>
