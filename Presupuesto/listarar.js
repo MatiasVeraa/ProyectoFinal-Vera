@@ -85,10 +85,15 @@ document.addEventListener("DOMContentLoaded", function () {
                         <li>Complejidad: ${encontrarproducto.complejidad}</li>
                         <li>Precio: $${encontrarproducto.precio}</li>
                     </ul><br>
-                    <p> El presente documento tiene carácter meramente estimativo...</p>
+                    <p> El presente documento tiene carácter meramente estimativo y no constituye una oferta definitiva ni un compromiso vinculante por parte de DA. La información contenida en este documento se proporciona a título informativo y está sujeta a modificaciones con previo aviso.
+
+Este presupuesto no se considera cerrado ni vinculante hasta tanto no sea aprobado formalmente mediante la firma del CEO y demás partes responsables. En consecuencia, DA no se hace responsable por eventuales ajustes de precios derivados de la inflación, variaciones en costos de materiales, servicios o cualquier otro factor económico que pueda impactar en el monto final del proyecto.
+
+La aceptación de este documento no implica obligación alguna para las partes, reservándose DA el derecho de modificar, actualizar o rechazar la propuesta en cualquier momento antes de su aprobación final, notificando previamente cualquier cambio relevante.</p>
                 `;
 
-                bloque2.innerHTML = `<button class="boton" id="pdf">Descargar PDF</button>`;
+                bloque2.innerHTML = `<button class="boton" id="descargarPDF">Descargar PDF</button>`;
+
                 bloque3.innerHTML = "";
                 bloque4.innerHTML = "";
 
