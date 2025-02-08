@@ -4,8 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let bloque3 = document.getElementById("bloque3");
     let bloque4 = document.getElementById("bloque4");
 
-    console.log("listarar.html está cargado");
-
     bloque1.innerHTML = `<h1 class="title">Tu presupuesto está casi listo</h1>`;
     bloque2.innerHTML = `<h2 class="subtitle">Llena el formulario con los datos correspondientes</h2>`;
 
@@ -18,8 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
             <option value="sitio_seo">Sitio Web + SEO</option>
             <option value="redes_sociales">Redes Sociales</option>
         </select>
-
-        
 
         <label for="paginas">Selecciona la complejidad del proyecto:</label>
         <select id="paginas">
@@ -59,11 +55,11 @@ document.addEventListener("DOMContentLoaded", function () {
             `;
         } else if (servicio === "redes_sociales") {
             complejidadproyecto.innerHTML = `
-                <option value="" disabled selected>Elige un campo</option>
-                <option value="red_social1">1 Red Social</option>
-                <option value="red_social2">2 Redes Sociales</option>
-                <option value="red_social3">3 o más Redes Sociales</option>
-            `;
+                 <option value="" disabled selected>Elige un campo</option>
+                <option value="bajo">1 Red Social</option>
+                 <option value="medio">2 Redes Sociales</option>
+                 <option value="alto">3 o más Redes Sociales</option>
+    `;
         }
     });
 
@@ -76,6 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const valido = telefono && !telefono.includes(' ') && telefono.length === 10 && !isNaN(telefono);
 
         if (valido) {
+            // Comparar correctamente con los valores del localStorage
             const encontrarproducto = productos.find(producto =>
                 producto.servicioproducto === servicioelejido && producto.complejidad === complejidadelejida
             );
@@ -88,24 +85,17 @@ document.addEventListener("DOMContentLoaded", function () {
                         <li>Complejidad: ${encontrarproducto.complejidad}</li>
                         <li>Precio: $${encontrarproducto.precio}</li>
                     </ul><br>
-                    <p> El presente documento tiene carácter meramente estimativo y no constituye una oferta definitiva ni un compromiso vinculante por parte de DA. La información contenida en este documento se proporciona a título informativo y está sujeta a modificaciones con previo aviso.
-
-                    Este presupuesto no se considera cerrado ni vinculante hasta tanto no sea aprobado formalmente mediante la firma del CEO y demás partes responsables. En consecuencia, DA no se hace responsable por eventuales ajustes de precios derivados de la inflación, variaciones en costos de materiales, servicios o cualquier otro factor económico que pueda impactar en el monto final del proyecto.
-
-                    La aceptación de este documento no implica obligación alguna para las partes, reservándose DA el derecho de modificar, actualizar o rechazar la propuesta en cualquier momento antes de su aprobación final, notificando previamente cualquier cambio relevante.</p>
+                    <p> El presente documento tiene carácter meramente estimativo...</p>
                 `;
 
                 bloque2.innerHTML = `<button class="boton" id="pdf">Descargar PDF</button>`;
                 bloque3.innerHTML = "";
                 bloque4.innerHTML = "";
 
-                // Agregar evento de descarga después de crear el botón
-                bloque2.innerHTML = `<button class="boton" id="descargarPDF">Descargar PDF</button>`;
-
                 setTimeout(() => {
                     document.getElementById("descargarPDF").addEventListener("click", capturarPantalla);
                 }, 100);
-                
+
             } else {
                 document.getElementById("resultado").innerHTML = "No hay ningún producto que coincida con lo que buscas.";
             }
@@ -142,17 +132,14 @@ function capturarPantalla() {
 
     const pdfElement = document.getElementById("pdf");
 
-    html2canvas(pdfElement, { scale: 2 }).then(canvas => {  // Aumento la escala
+    html2canvas(pdfElement, { scale: 2 }).then(canvas => {
         let imgData = canvas.toDataURL("image/png");
 
-        // Definir el tamaño base en A4
-        let imgWidth = 190; // Aumentado para más zoom (antes 190)
+        let imgWidth = 190;
         let imgHeight = (canvas.height * imgWidth) / canvas.width;
 
-        // Si la imagen es muy alta, recortarla
         if (imgHeight > 280) imgHeight = 280;
 
-        // Agregar la imagen al PDF con más zoom
         doc.addImage(imgData, "PNG", 10, 10, imgWidth, imgHeight);
         doc.save("presupuesto.pdf");
     });
