@@ -20,75 +20,75 @@
 .footer{ 
     margin-top: 5%;
     background-color: var(--color-footer);
-    width: 100%;              /* Ocupar todo el ancho de la página */
-    height: 23vh;        /* 28% de la altura de la ventana, menor para menos espacio */
-    display: flex;                  /* Usamos flexbox */
-    justify-content: center;        /* Centra los elementos horizontalmente */
-    align-items: center;            /* Centra los elementos verticalmente */
+    width: 100%;             
+    height: 23vh;       
+    display: flex;                  
+    justify-content: center;        
+    align-items: center;            
     text-align: center;   
 }
 
 .banner{
     background-color: var(--primary-color);
-    width: 100%;              /* Ocupar todo el ancho de la página */
-    height: 28vh;             /* 28% de la altura de la ventana, menor para menos espacio */
+    width: 100%;              
+    height: 28vh;            
     display: flex;
-    flex-direction: column;   /* Coloca el título y subtítulo uno encima del otro */
-    justify-content: center;  /* Centra el contenido verticalmente */
-    align-items: center;      /* Centra el contenido horizontalmente */
-    text-align: center;       /* Alinea el texto al centro */
+    flex-direction: column;  
+    justify-content: center;  
+    align-items: center;      
+    text-align: center;       
 } 
 
 .subbanner {
-    width:100%;              /* Ocupar todo el ancho de la página */
-    height: 20vh;             /* 32% de la altura de la ventana, menos espacio */
+    width:100%;            
+    height: 20vh;           
     display: flex;
-    justify-content: center;  /* Centra el contenido horizontalmente */
-    align-items: center;      /* Centra el contenido verticalmente */
-    text-align: center;       /* Alinea el texto al centro */
-    margin-top: 0;            /* Elimina margen superior */
+    justify-content: center;  
+    align-items: center;     
+    text-align: center;       
+    margin-top: 0;           
 }
 
 
 .botonescentrados {
-    width:100%;              /* Ocupar todo el ancho de la página */
-    height: 10vh;             /* 32% de la altura de la ventana, menos espacio */
+    width:100%;             
+    height: 10vh;             
     display: flex;
-    justify-content: center;  /* Centra el contenido horizontalmente */
-    align-items: center;      /* Centra el contenido verticalmente */
-    text-align: center;       /* Alinea el texto al centro */
-    margin-top: 0;            /* Elimina margen superior */
+    justify-content: center; 
+    align-items: center;     
+    text-align: center;      
+    margin-top: 0;            
 }
 
 
 .bloquecompleto {
-    width:100%;              /* Ocupar todo el ancho de la página */
-    height: 100vh;             /* 32% de la altura de la ventana, menos espacio */
+    width:100%;              
+    height: 100vh;             
     display: flex;
-    justify-content: center;  /* Centra el contenido horizontalmente */
-    align-items: center;      /* Centra el contenido verticalmente */
-    text-align: center;       /* Alinea el texto al centro */
-    margin-top: 0;            /* Elimina margen superior */
+    justify-content: center; 
+    align-items: center;      
+    text-align: center;      
+    margin-top: 0;            
 }
 
 .bloquechcio {
-    width:100%;              /* Ocupar todo el ancho de la página */
-    height: 100vh;             /* 32% de la altura de la ventana, menos espacio */
+    width:100%;             
+    height: 100vh;             
     display: flex;
-    justify-content: center;  /* Centra el contenido horizontalmente */
-    align-items: center;      /* Centra el contenido verticalmente */
-    text-align: center;       /* Alinea el texto al centro */
-    margin-top: 0;            /* Elimina margen superior */
+    justify-content: center; 
+    align-items: center;      
+    text-align: center;       
+    margin-top: 0;           
 }
 
 .bloquestandard {
     padding-top: var(--padding);
     display: grid;
-    grid-template-columns: auto ; /* Alterna entre columnas de labels e inputs */
-    gap: 20px 40px; /* Espaciado entre filas y columnas */
-    max-width: 1000px; /* Ajusta según tu diseño */
+    grid-template-columns: auto ; 
+    gap: 20px 40px; 
+    max-width: 1000px;
     margin: auto;
-    align-items: center; /* Centra verticalmente los elementos */
+    align-items: center; 
 }
 /* Título */
 .title {
@@ -97,8 +97,8 @@
     font-size: 70px;
     font-family: var(--font-primary);
     font-weight: bold;
-    margin-bottom: 5px;       /* Reduce el espacio entre el título y el subtítulo */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+    margin-bottom: 5px;       
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
 }
 
 /* Subtítulo */
@@ -109,8 +109,8 @@
     font-size: 30px;
     font-family: var(--font-primary);
     padding: 10px 20px;
-    margin-top: 0;             /* Elimina espacio superior para acercarlo más al título */
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    margin-top: 0;             
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); 
 }
 
 .txt { font-family: var(--font-primary);
@@ -126,20 +126,20 @@
 
 /*BOTONES GENERALES*/
 .boton-container {
-    display: grid;                 /* Usamos grid para la disposición */
-    grid-template-columns: repeat(2, 1fr); /* Crea 2 columnas de igual tamaño */
-    gap: 20px;                     /* Espacio entre los botones */
-    justify-items: center;         /* Centra los botones horizontalmente */
-    align-items: center;           /* Centra los botones verticalmente */
+    display: grid;                
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;                     
+    justify-items: center;         
+    align-items: center;          
     margin: 20px; 
-    width: auto;                 /* Margen alrededor del contenedor */
+    width: auto;                
 }
 
 .boton {
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    width: 150px;                 /* Ancho del botón */
-    height: 50px;                 /* Alto del botón */
+    width: 150px;                 
+    height: 50px;                
     font-family: var(--font-primary);
     font-size: 18px;
     font-weight: bold;
@@ -175,8 +175,8 @@
 .boton2 {
     background-color: var(--secondary-color);
     color: var(--primary-color);
-    width: 150px;                 /* Ancho del botón */
-    height: 50px;                 /* Alto del botón */
+    width: 150px;                 
+    height: 50px;                 
     font-family: var(--font-primary);
     font-size: 18px;
     font-weight: bold;
@@ -256,7 +256,7 @@ label {
     cursor: pointer;
     transition: background 0.3s;
     display: block;
-    margin: 0 auto; /* Centro horizontal */
+    margin: 0 auto; 
     margin-top: 2%;
   
 }
@@ -266,23 +266,23 @@ label {
 }
 .form-grid {
     display: grid;
-    grid-template-columns: auto ; /* Alterna entre columnas de labels e inputs */
-    gap: 20px 40px; /* Espaciado entre filas y columnas */
-    max-width: 1000px; /* Ajusta según tu diseño */
+    grid-template-columns: auto ; 
+    gap: 20px 40px; 
+    max-width: 1000px;
     margin: auto;
-    align-items: center; /* Centra verticalmente los elementos */
+    align-items: center; 
 }
 
 .form-grid label {
     font-size: 16px;
     font-weight: bold;
     color: var(--hover-color);
-    text-align: left; /* Labels alineados a la derecha */
+    text-align: left;
 }
 
 .form-grid input, 
 .form-grid select {
-    width: 100%; /* Inputs y selects ocupan toda su columna */
+    width: 100%; 
     padding: 10px;
     border: 1px solid var(--primary-color);
     font-size: 16px;
@@ -291,38 +291,37 @@ label {
 
 
 ul {
-    list-style-type: none; /* Elimina los puntos de la lista */
-    padding: 0; /* Elimina el padding por defecto */
-    margin: 0; /* Elimina el margen por defecto */
-    font-family: var(--font-primary); /* Establece una fuente estándar */
-    width: 100%; /* Hace que la lista ocupe el 100% del ancho del contenedor */
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+    font-family: var(--font-primary); 
+    width: 100%; 
 }
 
 li {
-    background-color: #f9f9f9; /* Fondo claro para los items */
-    padding: 15px; /* Espacio alrededor de cada item */
-    margin-bottom: 10px; /* Espacio entre los items */
-    border: 1px solid var(--primary-color); /* Bordes suaves */
-    border-radius: 5px; /* Bordes redondeados */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    transition: transform 0.3s ease; /* Efecto de transición al pasar el mouse */
+    background-color: #f9f9f9; 
+    padding: 15px; 
+    margin-bottom: 10px; 
+    border: 1px solid var(--primary-color);
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /
 }
 
 li:hover {
-    transform: translateY(-5px); /* Levanta el item ligeramente al pasar el mouse */
-    background-color: #f0f0f0; /* Fondo ligeramente más oscuro al pasar el mouse */
+    transform: translateY(-5px); 
+    background-color: #f0f0f0;
 }
 
 li span {
-    font-weight: bold; /* Destaca los textos importantes */
+    font-weight: bold; 
 }
 
 li .precio {
-    color: var(--hover-color); /* Verde para los precios */
+    color: var(--hover-color); 
     font-weight: bold;
-    font-size: 1.1em; /* Hace que el precio sea un poco más grande */
+    font-size: 1.1em; 
 }
-
 
 
 
@@ -341,4 +340,7 @@ p { font-family: var(--font-primary);
     color: var(red);
     font-size: 20px;
     
+}
+a{
+    text-decoration: none;
 }

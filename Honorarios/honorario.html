@@ -17,6 +17,17 @@
     <div class="bloquecompleto" id="bloque3"></div>
     <div class="bloque4Home" id="bloque4"></div>
 
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+       fetch('../footer.html')
+       .then(response => response.text())
+       .then(data => {
+       document.body.insertAdjacentHTML('beforeend', data);
+    });
+});
+
+</script>
     <script src="honorario.js"></script>
     <script src="../../CrearParametros/parametro.js"></script>
 

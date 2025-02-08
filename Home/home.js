@@ -14,13 +14,13 @@ bloque3.innerHTML=  `
                        `
 
 bloque4.innerHTML=` 
-                <button class="boton boton-container">Servicios</button>
+                
                 <button class="boton boton-container" id="honorario">Honorarios</button>
                 `
 
 
 document.getElementById("presupuestoboton").onclick = () => {
-     window.location.href = "../Presupuesto/listarar.html"; // Redirige a home.html
+     window.location.href = "../Presupuesto/listarar.html"; 
      };
 
 document.getElementById("honorario").onclick = () => {
@@ -31,7 +31,7 @@ document.getElementById("honorario").onclick = () => {
 
             bloque1.innerHTML= `<h1 class="title">Valida tus datos</h1> `
             bloque2.innerHTML= `<h2 class="subtitle">Area restringida para administradores </h2> `
-            // Mostrar un formulario de login en el bloque1
+            
     
             bloque5.innerHTML= ` 
                                 <label for="adminuser">Ingresa tu usuario:</label>

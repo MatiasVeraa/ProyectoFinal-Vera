@@ -9,7 +9,7 @@ app.use(cors());
 
 const SECRET_KEY = "secreto123";
 
-// Usuarios registrados (esto sería una base de datos en un proyecto real)
+// Usuarios registrados 
 const usuarios = [
     { usuario: "admin", password: "123" },
     { usuario: "usuario1", password: "clave123" }

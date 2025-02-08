@@ -16,6 +16,17 @@
     <div class="form-grid" id= "bloque3"></div>
     <div class="botonescentrados" id= "bloque4"></div>
     <div id= "bloque5"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+       fetch('../footer.html')
+       .then(response => response.text())
+       .then(data => {
+       document.body.insertAdjacentHTML('beforeend', data);
+    });
+});
+
+</script>
     <script src="parametro.js"></script>
 
 </body>
